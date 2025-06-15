@@ -1,0 +1,169 @@
+/* Basic reset - removes default spacing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Main page styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1a;
+    color: white;
+    padding: 20px;
+}
+
+/* Main container that holds everything */
+#container {
+    max-width: 500px;
+    margin: 0 auto;
+    background-color: #2d2d2d;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+/* Main heading */
+h1 {
+    text-align: center;
+    color: #4a9eff;
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+/* Section headings */
+h2 {
+    color: #cccccc;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    text-align : center;
+}
+
+h3 {
+    color: white;
+    font-size: 1.3rem;
+}
+
+/* Form container */
+#expense-form {
+    margin-bottom: 30px;
+}
+
+/* Input fields styling */
+input[type="text"], 
+input[type="number"] {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    background-color: #404040;
+    border: 2px solid #555555;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+}
+
+/* Input fields when clicked/focused */
+input[type="text"]:focus, 
+input[type="number"]:focus {
+    border-color: #4a9eff;
+    outline: none;
+}
+
+/* Placeholder text color */
+input::placeholder {
+    color: #888888;
+}
+
+/* Add button styling */
+button[type="submit"] {
+    width: 100%;
+    padding: 12px;
+    background-color: #4a9eff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+#expense-list button{
+    color: white;
+    width:auto;
+    padding: 12px;
+    border:none;
+    background-color: #f82626;
+    border-radius: 8px;
+    font-size:1.1rem;
+    cursor : pointer;
+}
+
+#expense-list button:hover{
+    background-color: #b91a1a;;
+}
+
+/* Button hover effect */
+button[type="submit"]:hover {
+    background-color: #3d85d9;
+}
+
+/* Expense list container */
+#expense-list {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+/* Individual expense items */
+#expense-list li {
+    background-color: #404040;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Expense name styling */
+.expense-name {
+    color: white;
+    font-weight: bold;
+}
+
+/* Expense amount styling */
+.expense-amount {
+    color: #ff6b6b;
+    font-weight: bold;
+    font-size: 1.1rem;
+}
+
+/* Total section */
+#total {
+    background-color: #28a745;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
+}
+
+/* Total amount number */
+#total-amount {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Mobile phone adjustments */
+@media (max-width: 600px) {
+    #container {
+        padding: 20px;
+        margin: 10px;
+    }
+    
+    /* Stack expense info on mobile */
+    #expense-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .expense-amount {
+        margin-top: 5px;
+        align-self: flex-end;
+    }
+}
